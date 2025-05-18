@@ -1,0 +1,28 @@
+<html>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<body>
+<div id="app">
+    <h1>
+    {{ message }}
+    </h1>
+    <button @click="clickMe">Click here</button>
+</div>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                message: 'Hello It\'s Me',
+            }
+        },
+        methods: {
+			clickMe() {
+				console.log('button clicked')
+                this.message = 'Hello It\'s Me 2'
+            }
+        }
+    })
+    app.mount('#app')
+</script>
+
+</body>
+</html>
